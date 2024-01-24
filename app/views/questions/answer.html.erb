@@ -1,3 +1,17 @@
-<h1> Here's your answer: </h1>
-<%= p params[:questiontocoach] %>
-<%= p @answer %>
+<h1>Stupid Coaching</h1>
+
+ <cite>Your question:</cite>
+  <p>
+    <% if @question.blank? %>
+      😶
+    <% else %>
+      <%= @question %>
+    <% end %>
+  </p>
+
+  <cite>Your coach's answer:</cite>
+  <p><%= @answer %></p>
+
+
+
+<%= link_to "Ask a new question", ask_path %>
